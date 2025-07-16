@@ -2,6 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import helmet from 'helmet';
 import compression from 'compression';
+import mongoose from './dbs/init.mongodb.js';
 
 
 const app = express();
