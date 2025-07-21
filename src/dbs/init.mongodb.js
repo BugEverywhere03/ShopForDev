@@ -1,9 +1,10 @@
 'use strict'
 
 import mongoose from 'mongoose';
-import countConnect from './helper/check.connect.js';
+import countConnect from '../helper/check.connect.js';
+import dbConfig from '../config/config.mongodb.js';
 
-const connectionString = `mongodb://localhost:27017/ShopForDev`;
+const connectionString = `mongodb://${dbConfig.db.host}:${dbConfig.db.port}/${dbConfig.db.name}`;
 
 class Database {
     constructor() {

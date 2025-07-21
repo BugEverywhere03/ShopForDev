@@ -3,9 +3,11 @@ import morgan from 'morgan';
 import helmet from 'helmet';
 import compression from 'compression';
 import mongoose from './dbs/init.mongodb.js';
+import dotenv from 'dotenv';
 
 
 const app = express();
+dotenv.config();
 
 // init middleware
 app.use(morgan('dev'));
