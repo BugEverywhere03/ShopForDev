@@ -33,7 +33,10 @@ var shopSchema = new mongoose.Schema({
         type: Array,
         default: [],
     }
+}, {
+    timestamps: true,
+    collection: COLLECTION_NAME,
 });
 
 
-export default mongoose.model('Shop', shopSchema);
+export default mongoose.model(DOCUMENT_NAME, shopSchema);
